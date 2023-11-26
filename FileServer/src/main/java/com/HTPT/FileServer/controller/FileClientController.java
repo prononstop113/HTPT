@@ -2,6 +2,7 @@ package com.HTPT.FileServer.controller;
 
 import com.HTPT.FileServer.Model.APIResponse;
 import com.HTPT.FileServer.Model.APISucResponse;
+import com.HTPT.FileServer.Model.FileModel;
 import com.HTPT.FileServer.Service.FileServerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.List;
 
 @RestController
 @RequestMapping("/client")
@@ -27,7 +29,9 @@ public class FileClientController {
     }
     @GetMapping("/get-list-file")
     public APIResponse getListFileName(){
-        return new APISucResponse().withData(fileServerService.getListFileName());
+        List<FileModel> aa = fileServerService.getListFileName();
+        return new APISucResponse().withData(aa);
+
     }
     @PostMapping("/upload")
     public APIResponse uploadFile(@RequestPart MultipartFile file) throws IOException {

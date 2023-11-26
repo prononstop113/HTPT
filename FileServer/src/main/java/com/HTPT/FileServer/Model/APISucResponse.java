@@ -21,4 +21,5 @@ public class APISucResponse extends  APIResponse{
         setMessage("Success");
         setData(data);
     }
+
 }
