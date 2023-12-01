@@ -21,36 +21,4 @@ public class APIResponse {
         setData(data);
         return this;
     }
-
-    public void setData(Object data) {
-        this.data = data;
-    }
-
-    public Object getData() {
-        return data;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public String getErrorCode() {
-        return errorCode;
-    }
-
-    public void setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-    }
 }

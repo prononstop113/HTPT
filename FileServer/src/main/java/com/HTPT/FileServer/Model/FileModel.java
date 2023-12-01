@@ -1,27 +1,13 @@
 package com.HTPT.FileServer.Model;
 
+import lombok.Data;
+
+@Data
 public class FileModel {
+    private Integer id;
     private String fileName;
-    private double fileSize;
-
-    public FileModel(String fileName, double fileSize) {
-        this.fileName = fileName;
-        this.fileSize = fileSize;
-    }
-
-    public String getFileName() {
-        return fileName;
-    }
-
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
-
-    public double getFileSize() {
-        return fileSize;
-    }
-
-    public void setFileSize(double fileSize) {
-        this.fileSize = fileSize;
-    }
+    private Double fileSize;
+    private String ipAddress;
+    private Integer downloadCount;
+    private String note;
 }
